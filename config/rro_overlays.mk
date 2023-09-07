@@ -41,6 +41,10 @@ PRODUCT_PACKAGES += \
     Contacts \
     Gallery2
 
+# Custom Icons
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/2by2/overlay/themes/CustomIcons
+
 # Use Matlog for userdebug and eng builds
 ifneq (,$(filter userdebug eng,$(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += MatLog
