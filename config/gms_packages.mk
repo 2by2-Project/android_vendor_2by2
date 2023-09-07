@@ -74,6 +74,7 @@ PRODUCT_PACKAGES += \
     EmergencyInfoGoogleNoUi \
     Flipendo \
     GoogleServicesFramework \
+    NexusLauncherRelease \
     StorageManagerGoogle \
     WallpaperPickerGoogleRelease \
     com.google.android.dialer.support

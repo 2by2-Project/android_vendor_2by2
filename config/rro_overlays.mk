@@ -36,7 +36,6 @@ PRODUCT_PACKAGES += \
 
 # Packages
 PRODUCT_PACKAGES += \
-    Launcher3 \
     DeskClock \
     Dialer \
     Contacts \
