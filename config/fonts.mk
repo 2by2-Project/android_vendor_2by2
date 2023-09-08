@@ -16,5 +16,4 @@ PRODUCT_PACKAGES += \
     FontGoogleSansOverlay \
     FontGoogleSansLatoOverlay \
     FontInterOverlay \
-    FontShinGoOverlay \
     FontRubikRubikOverlay

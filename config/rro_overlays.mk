@@ -31,21 +31,9 @@ PRODUCT_PACKAGES += \
 # 2by2-side
 PRODUCT_PACKAGES += \
     2by2FrameworksResOverlay \
-#    2by2SystemUIResOverlay \
-#    2by2SettingsResOverlay
-
-# Packages
-PRODUCT_PACKAGES += \
-    DeskClock \
-    Dialer \
-    Contacts \
-    Gallery2
+    2by2SystemUIResOverlay \
+    2by2SettingsResOverlay
 
 # Custom Icons
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/2by2/overlay/themes/CustomIcons
-
-# Use Matlog for userdebug and eng builds
-ifneq (,$(filter userdebug eng,$(TARGET_BUILD_VARIANT)))
-PRODUCT_PACKAGES += MatLog
-endif

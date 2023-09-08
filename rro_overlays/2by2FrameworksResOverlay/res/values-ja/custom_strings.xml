@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 The 2by2 Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Cycle through ringer modes -->
+    <string name="volume_dialog_ringer_guidance_normal">通話と通知を着信します</string>
+</resources>

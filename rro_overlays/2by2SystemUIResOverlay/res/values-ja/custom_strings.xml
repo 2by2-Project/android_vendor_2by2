@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 The 2by2 Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Sound QS Tile -->
+    <string name="quick_settings_sound_label">マナーモード</string>
+    <string name="quick_settings_sound_ring">OFF</string>
+    <string name="quick_settings_sound_vibrate">（バイブ）</string>
+    <string name="quick_settings_sound_mute">（ミュート）</string>
+</resources>
