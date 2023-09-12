@@ -1,0 +1,55 @@
+/*
+ * Copyright (C) 2023 The 2by2 Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+android_app_import {
+    name: "SHContacts",
+    apk: "*/ContactsSH_Material.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: true,
+    },
+    overrides: [
+        "GoogleContacts",
+    ],
+    privileged: true,
+    product_specific: true,
+    required: [
+        "privapp-permissions-contacts.xml",
+    ],
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-contacts.xml",
+    sub_dir: "permissions",
+    src: "*/privapp-permissions-contacts.xml",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+android_app_import {
+    name: "SHDeskClock",
+    apk: "*/DeskClock.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: true,
+    },
+    overrides: [
+        "PrebuiltDeskClockGoogle",
+    ],
+    privileged: true,
+    product_specific: true,
+    required: [
+        "privapp-permissions-deskclock.xml",
+    ],
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-deskclock.xml",
+    sub_dir: "permissions",
+    src: "*/privapp-permissions-deskclock.xml",
+    filename_from_src: true,
+    product_specific: true,
+}
