@@ -7,4 +7,8 @@
     <!-- Cycle through ringer modes gesture -->
     <string name="prevent_ringing_option_cycle">サイクルスルーモード</string>
     <string name="prevent_ringing_option_cycle_summary">ON (サイクルスルーモード)</string>
+
+    <!-- About device screen, build maintainer -->
+    <string name="build_maintainer">ビルドメンテナ</string>
+    <string name="build_maintainer_summary">不明</string>
 </resources>
