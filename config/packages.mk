@@ -4,14 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Common packages
-PRODUCT_PACKAGES += \
-    Launcher3 \
-    Dialer \
-    Contacts \
-    DeskClock \
-    Gallery2
-
 # Required permissions
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/com.android.launcher3.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.launcher3.xml \
@@ -28,19 +20,21 @@ FORCE_AOSP_DIALER ?= true
 FORCE_AOSP_CONTACTS ?= true
 FORCE_AOSP_DESKCLOCK ?= true
 
-# Google Dialer
-ifneq ($(FORCE_AOSP_DIALER),true)
+# Dialer
+ifeq ($(FORCE_AOSP_DIALER),true)
+PRODUCT_PACKAGES += Dialer
+else
 PRODUCT_PACKAGES += GoogleDialer
 endif
 
-# Google Contacts
-ifneq ($(FORCE_AOSP_CONTACTS),true)
-PRODUCT_PACKAGES += GoogleContacts
+# Contacts
+ifeq ($(FORCE_AOSP_CONTACTS),true)
+PRODUCT_PACKAGES += SHContacts
 endif
 
-# Google DeskClock
-ifneq ($(FORCE_AOSP_DESKCLOCK),true)
-PRODUCT_PACKAGES += PrebuiltDeskClockGoogle
+# DeskClock
+ifeq ($(FORCE_AOSP_DESKCLOCK),true)
+PRODUCT_PACKAGES += SHDeskClock
 endif
 
 # Use Matlog for userdebug and eng builds

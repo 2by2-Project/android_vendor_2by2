@@ -40,11 +40,13 @@ PRODUCT_PACKAGES += \
     CalculatorGooglePrebuilt \
     CalendarGooglePrebuilt \
     Chrome-Stub \
+    GoogleContacts \
     GoogleTTS \
     LatinIMEGooglePrebuilt \
     LocationHistoryPrebuilt \
     MarkupGoogle \
     PixelThemesStub \
+    PrebuiltDeskClockGoogle \
     SoundAmplifierPrebuilt \
     SoundPickerPrebuilt \
     TrichromeLibrary-Stub \
