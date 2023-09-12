@@ -10,5 +10,4 @@
 
     <!-- About device screen, build maintainer -->
     <string name="build_maintainer">ビルドメンテナ</string>
-    <string name="build_maintainer_summary">不明</string>
 </resources>
