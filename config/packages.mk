@@ -11,10 +11,6 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/com.android.contacts.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.contacts.xml \
     vendor/2by2/config/permissions/privapp-permissions-lineage.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-lineage.xml
 
-# GMS
-$(call inherit-product, vendor/2by2/config/gms.mk)
-$(call inherit-product, vendor/2by2/config/gms_extras.mk)
-
 # Additional packages flags
 FORCE_AOSP_DIALER ?= true
 FORCE_AOSP_CONTACTS ?= true
