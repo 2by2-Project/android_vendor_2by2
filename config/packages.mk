@@ -11,6 +11,10 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/com.android.contacts.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.contacts.xml \
     vendor/2by2/config/permissions/privapp-permissions-lineage.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-lineage.xml
 
+# For Google Photos
+PRODUCT_COPY_FILES += \
+    vendor/2by2/config/permissions/com.google.android.apps.photos.NEXUS_PRELOAD.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/com.google.android.apps.photos.NEXUS_PRELOAD.xml
+
 # Additional packages flags
 FORCE_AOSP_DIALER ?= true
 FORCE_AOSP_CONTACTS ?= true
