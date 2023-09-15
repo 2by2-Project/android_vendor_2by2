@@ -15,6 +15,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/2by2/config/permissions/com.google.android.apps.photos.NEXUS_PRELOAD.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/com.google.android.apps.photos.NEXUS_PRELOAD.xml
 
+# 2byTricks
+PRODUCT_PACKAGES += \
+    2byTricks
+
 # Additional packages flags
 FORCE_AOSP_DIALER ?= true
 FORCE_AOSP_CONTACTS ?= true
