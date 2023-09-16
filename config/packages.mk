@@ -41,6 +41,12 @@ ifeq ($(FORCE_AOSP_DESKCLOCK),true)
 PRODUCT_PACKAGES += SHDeskClock
 endif
 
+# Camera
+ifneq ($(PRODUCT_NO_CAMERA),true)
+PRODUCT_PACKAGES += \
+    Aperture
+endif
+
 # Use Matlog for userdebug and eng builds
 ifneq (,$(filter userdebug eng,$(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += MatLog
