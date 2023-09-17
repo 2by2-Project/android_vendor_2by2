@@ -37,7 +37,7 @@ android_app_import {
         enabled: true,
     },
     overrides: [
-        "PrebuiltDeskClockGoogle",
+        "DeskClockGoogle",
     ],
     privileged: true,
     product_specific: true,
