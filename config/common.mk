@@ -9,5 +9,8 @@ include vendor/2by2/config/packages.mk
 # RRO Overlays
 include vendor/2by2/config/rro_overlays.mk
 
+# Bootanimation
+include vendor/2by2/config/bootanimation.mk
+
 # Version
 include vendor/2by2/config/version.mk
