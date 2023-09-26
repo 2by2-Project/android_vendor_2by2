@@ -1,12 +1,26 @@
-CUSTOM_DATE_YEAR := $(shell date -u +%Y)
-CUSTOM_DATE_MONTH := $(shell date -u +%m)
-CUSTOM_DATE_DAY := $(shell date -u +%d)
-CUSTOM_DATE_HOUR := $(shell date -u +%H)
-CUSTOM_DATE_MINUTE := $(shell date -u +%M)
-CUSTOM_BUILD_DATE_UTC := $(shell date -d '$(CUSTOM_DATE_YEAR)-$(CUSTOM_DATE_MONTH)-$(CUSTOM_DATE_DAY) $(CUSTOM_DATE_HOUR):$(CUSTOM_DATE_MINUTE) UTC' +%s)
-CUSTOM_BUILD_DATE := $(CUSTOM_DATE_YEAR)$(CUSTOM_DATE_MONTH)$(CUSTOM_DATE_DAY)-$(CUSTOM_DATE_HOUR)$(CUSTOM_DATE_MINUTE)
+# Copyright (C) 2023 The 2by2 Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
-CUSTOM_PLATFORM_VERSION := 13.0
+# Gapps included by default.
+ARROW_GAPPS := true
+ARROW_BUILD_ZIP_TYPE := GAPPS
 
-CUSTOM_VERSION := 2by2-Project_$(CUSTOM_BUILD)-$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BUILD_DATE)
-CUSTOM_VERSION_PROP := thirteen
+2BY2_BUILD_TYPE ?= COMMUNITY
+
+ifeq ($(2BY2_BUILD_TYPE), OFFICIAL)
+PRODUCT_PACKAGES += \
+    Updater
+endif
+
+ARROW_VERSION := 2by2-Project-$(ARROW_MOD_VERSION)-$(CURRENT_DEVICE)-$(2BY2_BUILD_TYPE)-$(shell date -u +%Y%m%d)
