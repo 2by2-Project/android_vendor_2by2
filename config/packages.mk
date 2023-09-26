@@ -20,9 +20,9 @@ PRODUCT_PACKAGES += \
     2byTricks
 
 # Additional packages flags
-FORCE_AOSP_DIALER ?= true
-FORCE_AOSP_CONTACTS ?= true
-FORCE_AOSP_DESKCLOCK ?= true
+FORCE_AOSP_DIALER ?= false
+FORCE_AOSP_CONTACTS ?= false
+FORCE_AOSP_DESKCLOCK ?= false
 
 # Dialer
 ifeq ($(FORCE_AOSP_DIALER),true)
