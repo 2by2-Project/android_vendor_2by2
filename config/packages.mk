@@ -21,30 +21,12 @@ PRODUCT_PACKAGES += \
 
 # Additional packages flags
 FORCE_AOSP_DIALER ?= false
-FORCE_AOSP_CONTACTS ?= false
-FORCE_AOSP_DESKCLOCK ?= false
 
 # Dialer
 ifeq ($(FORCE_AOSP_DIALER),true)
 PRODUCT_PACKAGES += Dialer
 else
 PRODUCT_PACKAGES += GoogleDialer
-endif
-
-# Contacts
-ifeq ($(FORCE_AOSP_CONTACTS),true)
-PRODUCT_PACKAGES += SHContacts
-endif
-
-# DeskClock
-ifeq ($(FORCE_AOSP_DESKCLOCK),true)
-PRODUCT_PACKAGES += SHDeskClock
-endif
-
-# Camera
-ifneq ($(PRODUCT_NO_CAMERA),true)
-PRODUCT_PACKAGES += \
-    Aperture
 endif
 
 # Use Matlog for userdebug and eng builds
