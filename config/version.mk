@@ -23,4 +23,7 @@ PRODUCT_PACKAGES += \
     Updater
 endif
 
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.2by2.releasetype=$(2BY2_BUILD_TYPE)
+
 ARROW_VERSION := 2by2-Project-$(ARROW_MOD_VERSION)-$(CURRENT_DEVICE)-$(2BY2_BUILD_TYPE)-$(shell date -u +%Y%m%d)
