@@ -14,3 +14,8 @@ include vendor/2by2/config/bootanimation.mk
 
 # Version
 include vendor/2by2/config/version.mk
+
+# Inherit Pixel stuff
+ifeq ($(TARGET_IS_PIXEL),true)
+$(call inherit-product, vendor/2by2/config/pixel.mk)
+endif
