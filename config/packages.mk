@@ -24,7 +24,9 @@ FORCE_AOSP_DIALER ?= false
 
 # Dialer
 ifeq ($(FORCE_AOSP_DIALER),true)
-PRODUCT_PACKAGES += Dialer
+PRODUCT_PACKAGES += \
+    Dialer \
+    DefaultDialerOverlay
 else
 PRODUCT_PACKAGES += GoogleDialer
 endif
