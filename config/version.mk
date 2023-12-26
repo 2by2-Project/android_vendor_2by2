@@ -12,18 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Gapps included by default.
-ARROW_GAPPS := true
-ARROW_BUILD_ZIP_TYPE := GAPPS
-
 2BY2_BUILD_TYPE ?= COMMUNITY
 
-ifeq ($(2BY2_BUILD_TYPE), OFFICIAL)
-PRODUCT_PACKAGES += \
-    Updater
-endif
+# Internal version
+LINEAGE_VERSION := 2by2-Project-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date +%Y%m%d)-$(LINEAGE_BUILD)-v$(CR_VERSION)
 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.2by2.releasetype=$(2BY2_BUILD_TYPE)
-
-ARROW_VERSION := 2by2-Project-$(ARROW_MOD_VERSION)-$(CURRENT_DEVICE)-$(2BY2_BUILD_TYPE)-$(shell date -u +%Y%m%d)
+# Display version
+LINEAGE_DISPLAY_VERSION := 2by2-Project-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(LINEAGE_BUILD)-v$(CR_VERSION)
