@@ -6,8 +6,25 @@
 
 # Gapps
 WITH_GMS ?= true
-TARGET_GAPPS_ARCH ?= arm64
+
+# GMS Flags
+TARGET_SUPPORTS_QUICK_TAP ?= false
+TARGET_USES_PIXEL_LAUNCHER ?= false
+FORCE_AOSP_DIALER ?= true
+FORCE_AOSP_CONTACTS ?= true
 
 ifeq ($(WITH_GMS),true)
-  $(call inherit-product, vendor/gapps/$(TARGET_GAPPS_ARCH)/$(TARGET_GAPPS_ARCH)-vendor.mk)
+  $(call inherit-product, vendor/gms/gms_full.mk)
+endif
+
+ifeq ($(TARGET_USES_PIXEL_LAUNCHER), true)
+PRODUCT_PACKAGES += NexusLauncherRelease
+endif
+
+ifneq ($(FORCE_AOSP_DIALER), true)
+PRODUCT_PACKAGES += GoogleDialer
+endif
+
+ifneq ($(FORCE_AOSP_CONTACTS), true)
+PRODUCT_PACKAGES += GoogleContacts
 endif

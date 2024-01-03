@@ -16,6 +16,13 @@ include vendor/2by2/config/bootanimation.mk
 include vendor/2by2/config/version.mk
 
 # Inherit Pixel stuff
+TARGET_IS_PIXEL ?= false
+TARGET_IS_PIXEL_6 ?= false
+TARGET_IS_PIXEL_7 ?= false
+TARGET_IS_PIXEL_8 ?= false
+TARGET_IS_PIXEL_FOLD ?= false
+TARGET_PIXEL_STAND_SUPPORTED ?= false
+
 ifeq ($(TARGET_IS_PIXEL),true)
 $(call inherit-product, vendor/2by2/config/pixel.mk)
 endif
