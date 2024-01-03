@@ -28,3 +28,8 @@ endif
 ifneq ($(FORCE_AOSP_CONTACTS), true)
 PRODUCT_PACKAGES += GoogleContacts
 endif
+
+# Add su only userdebug and eng builds
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+PRODUCT_PACKAGES += su
+endif
