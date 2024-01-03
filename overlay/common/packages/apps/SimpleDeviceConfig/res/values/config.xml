@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2020 The Proton AOSP Project
+                  2022 The LineageOS Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<resources>
+    <string-array name="configs_base">
+
+        <!-- Use new privacy indicators for location -->
+        <item>privacy/location_indicators_enabled=true</item>
+        <!-- Allow users to disable location indicators in Developer Options -->
+        <item>privacy/location_indicator_settings_enabled=true</item>
+
+        <!-- Machine learning back gesture (requires TensorFlow model) -->
+        <item>systemui/use_back_gesture_ml_model=true</item>
+        <item>systemui/back_gesture_ml_model_name=backgesture</item>
+        <item>systemui/back_gesture_ml_model_threshold=0.8</item>
+
+        <!-- Don't pin camera app to save memory -->
+        <item>runtime_native_boot/pin_camera=false</item>
+
+        <!-- Keep up to 7 days of permission usage history -->
+        <item>privacy/discrete_history_cutoff_millis=604800000</item>
+        <item>privacy/privacy_dashboard_7_day_toggle=true</item>
+
+        <!-- Enable protected by android banner -->
+        <item>privacy/safety_protection_enabled=true</item>
+
+        <!-- Globally enable the new photo picker -->
+        <item>storage_native_boot/take_over_get_content=true</item>
+
+        <!-- Disable always screen on -->
+        <item>attention_manager_service/keep_screen_on_enabled=false</item>
+
+        <!-- System UI -->
+        <item>systemui/clipboard_overlay_show_actions=true</item>
+        <item>systemui/quick_access_wallet_enabled=true</item>
+        <item>systemui/enable_screenshot_corner_flow=true</item>
+        <item>systemui/enable_screenshot_notification_smart_actions=true</item>
+        <item>systemui/enable_screenshot_scrolling=true</item>
+        <item>systemui/volume_separate_notification=true</item>
+
+        <!--
+            Device Personalization Services (AiAi)
+        -->
+
+        <!-- Now Playing (Pixel 2017+) -->
+        <item>device_personalization_services/NowPlaying__ambient_music_apk_music_detector_min_score=0.2</item>
+        <item>device_personalization_services/NowPlaying__ambient_music_get_model_state_cooldown_seconds_cloud_search=9</item>
+        <item>device_personalization_services/NowPlaying__ambient_music_index_manifest_17_09_02=256:https://storage.googleapis.com/music-iq-db/updatable_ytm_db/20230730-030034/manifest.json</item>
+        <item>device_personalization_services/NowPlaying__ambient_music_matcher_match_threshold_17_09_02=-2.0</item>
+        <item>device_personalization_services/NowPlaying__ambient_music_on_demand_enabled=true</item>
+        <item>device_personalization_services/NowPlaying__ambient_music_on_demand_music_confidence=0.48</item>
+        <item>device_personalization_services/NowPlaying__cloud_api_allowed=true</item>
+        <item>device_personalization_services/NowPlaying__enable_usage_fa=true</item>
+        <item>device_personalization_services/NowPlaying__favorites_enabled=true</item>
+        <item>device_personalization_services/NowPlaying__feature_users_count_enabled=true</item>
+        <item>device_personalization_services/NowPlaying__federated_analytics_allowed=true</item>
+        <item>device_personalization_services/NowPlaying__handle_ambient_music_results_with_history=true</item>
+        <item>device_personalization_services/NowPlaying__min_training_interval_millis=86400000</item>
+        <item>device_personalization_services/NowPlaying__nnfp_v3_model_enabled=false</item>
+        <item>device_personalization_services/NowPlaying__on_demand_enable_eager_prompt=true</item>
+        <item>device_personalization_services/NowPlaying__on_demand_fingerprinter_being_setup_warning=true</item>
+        <item>device_personalization_services/NowPlaying__on_demand_hide_if_fingerprinter_install_not_confirmed=true</item>
+        <item>device_personalization_services/NowPlaying__on_demand_min_supported_aga_version=12.35.17</item>
+        <item>device_personalization_services/NowPlaying__on_demand_retry_fingerprinter_install=true</item>
+        <item>device_personalization_services/NowPlaying__youtube_export_enabled=true</item>
+
+        <!-- Adaptive Sound (Pixel 2020) -->
+        <item>device_personalization_services/AdaptiveAudio__enable_adaptive_audio=true</item>
+        <item>device_personalization_services/AdaptiveAudio__show_promo_notification=false</item>
+        <item>device_personalization_services/AdaptiveAudio__use_silence_detector_state_bug_fix=true</item>
+
+        <!-- Live Caption (Pixel 2017 + OEM) -->
+        <item>device_personalization_services/Captions__enable_augmented_modality=true</item>
+        <item>device_personalization_services/Captions__enable_augmented_modality_input=true</item>
+        <item>device_personalization_services/Captions__enable_augmented_modality_language_detection=true</item>
+        <item>device_personalization_services/Captions__enable_augmented_music=false</item>
+        <item>device_personalization_services/Captions__enable_clearcut_logging=true</item>
+        <item>device_personalization_services/Captions__enable_language_detection=true</item>
+        <item>device_personalization_services/Captions__enable_punctuations=true</item>
+
+        <!-- WallpaperEffects -->
+        <item>device_personalization_services/WallpaperEffects__cinematic_models_mdd_manifest_config=Ct4IEtsICiF3YWxscGFwZXJlZmZlY3RzLWNpbmVtYXRpYy1tb2RlbHMSwgESdWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9tZGktc2VydmluZy9haWFpLXdhbGxwYXBlcmVmZmVjdHMtY2luZW1hdGljLW1vZGVscy83NDYvNTk2NDgzNDA1MzljOGU2OWRmZGZlYjkzNTk0OTIzYWJmZDBmMGQwNyCM4JQFKig1OTY0ODM0MDUzOWM4ZTY5ZGZkZmViOTM1OTQ5MjNhYmZkMGYwZDA3OhJkZXB0aF9tb2RlbC50ZmxpdGV4AKIBAKoBABLIARJ1aHR0cHM6Ly9kbC5nb29nbGUuY29tL21kaS1zZXJ2aW5nL2FpYWktd2FsbHBhcGVyZWZmZWN0cy1jaW5lbWF0aWMtbW9kZWxzLzc0Ni84NmE3MWYwYTIwYjFhMjhiNTY4MTMwZTliYTZjMTYzZTdhZjQzMTg5IKzsyQQqKDg2YTcxZjBhMjBiMWEyOGI1NjgxMzBlOWJhNmMxNjNlN2FmNDMxODk6GHBlcnNvbl9wb3NlX21vZGVsLnRmbGl0ZXgAogEAqgEAEs0BEnVodHRwczovL2RsLmdvb2dsZS5jb20vbWRpLXNlcnZpbmcvYWlhaS13YWxscGFwZXJlZmZlY3RzLWNpbmVtYXRpYy1tb2RlbHMvNzQ2L2I2NTQxNDFiOTUwNjY3OTVlYjBlNjNlZDRkNzFiZjQxZDQyYjFhNmMgyPPNAiooYjY1NDE0MWI5NTA2Njc5NWViMGU2M2VkNGQ3MWJmNDFkNDJiMWE2YzodcGVyc29uX3NlZ21lbnRlcl9tb2RlbC50ZmxpdGV4AKIBAKoBABLLARJ1aHR0cHM6Ly9kbC5nb29nbGUuY29tL21kaS1zZXJ2aW5nL2FpYWktd2FsbHBhcGVyZWZmZWN0cy1jaW5lbWF0aWMtbW9kZWxzLzc0Ni9lOTllZWJlMDQ2NDk4ZmU2N2MzMzdjZmZkMzkzODM4NTVkMjE0NjM5INCXrwIqKGU5OWVlYmUwNDY0OThmZTY3YzMzN2NmZmQzOTM4Mzg1NWQyMTQ2Mzk6G3JnYmRfaW5wYWludGVyX21vZGVsLnRmbGl0ZXgAogEAqgEAEsQBEnVodHRwczovL2RsLmdvb2dsZS5jb20vbWRpLXNlcnZpbmcvYWlhaS13YWxscGFwZXJlZmZlY3RzLWNpbmVtYXRpYy1tb2RlbHMvNzQ2L2ExNjQ4ZjQ2NDYyZDVmMTExOTVjNmEyYTBhN2M0MTMyZTEwNzJjMDIgsLo6KihhMTY0OGY0NjQ2MmQ1ZjExMTk1YzZhMmEwYTdjNDEzMmUxMDcyYzAyOhVzYWxpZW5jeV9tb2RlbC50ZmxpdGV4AKIBAKoBABgAUABYAGoECAEQAHAAogEAqAEAuAHqBdIBB2RlZmF1bHTaAQDiARsKBwgBEJ+xjRcKBwgCEKCxjRcKBwgDEKGxjRc</item>
+        <item>device_personalization_services/WallpaperEffects__enable_cinematic_effect=true</item>
+        <item>device_personalization_services/WallpaperEffects__enable_cinematic_mdd=true</item>
+        <item>device_personalization_services/WallpaperEffects__enable_person_segment_tpu=false</item>
+        <item>device_personalization_services/WallpaperEffects__return_texturedmesh_with_error_status=true</item>
+        <item>device_personalization_services/WallpaperEffects__use_gpu=true</item>
+
+        <!-- Pixel Launcher -->
+        <item>launcher/ENABLE_SMARTSPACE_ENHANCED=false</item>
+        <item>launcher/ENABLE_QUICK_LAUNCH_V2=false</item>
+        <item>launcher/GBOARD_UPDATE_ENTER_KEY=false</item>
+        <item>launcher/enable_one_search=false</item>
+        <item>launcher/enable_quick_launch_v2=false</item>
+    </string-array>
+</resources>
