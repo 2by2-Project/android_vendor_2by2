@@ -8,28 +8,36 @@
 WITH_GMS ?= true
 
 # GMS Flags
+TARGET_USES_MINI_GAPPS ?= false
+
 TARGET_SUPPORTS_QUICK_TAP ?= true
 TARGET_USES_PIXEL_LAUNCHER ?= false
 FORCE_AOSP_DIALER ?= true
 FORCE_AOSP_CONTACTS ?= true
 
 ifeq ($(WITH_GMS),true)
+
+ifeq ($(TARGET_USES_MINI_GAPPS),true)
+  $(call inherit-product, vendor/gms/gms_mini.mk)
+else
   $(call inherit-product, vendor/gms/gms_full.mk)
 endif
 
 ifeq ($(TARGET_USES_PIXEL_LAUNCHER), true)
-PRODUCT_PACKAGES += NexusLauncherRelease
+  PRODUCT_PACKAGES += NexusLauncherRelease
 endif
 
 ifneq ($(FORCE_AOSP_DIALER), true)
-PRODUCT_PACKAGES += GoogleDialer
+  PRODUCT_PACKAGES += GoogleDialer
 endif
 
 ifneq ($(FORCE_AOSP_CONTACTS), true)
-PRODUCT_PACKAGES += GoogleContacts
+  PRODUCT_PACKAGES += GoogleContacts
+endif
+
 endif
 
 # Add su only userdebug and eng builds
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-PRODUCT_PACKAGES += su
+  PRODUCT_PACKAGES += su
 endif
